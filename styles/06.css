@@ -1,0 +1,53 @@
+.bg {
+    width: 650px;
+    margin-bottom: 11px;
+}
+
+
+fieldset {
+    background-color: rgba(156, 231, 250, 0.459);
+    border-radius: 4px;
+}
+
+.legend {
+    color: rgb(6, 179, 248);
+}
+
+.label {
+    color: rgb(172, 103, 76);
+    font-size: 12px;
+}
+
+.input, textarea  {
+    width: 220px;
+    height: 10px;
+    float: right;
+    margin-right: 60px;
+}
+
+select {
+    float: right; 
+    margin-right: 60px;
+    padding-right: 117px;
+}
+
+.area {
+    margin-left: 10px;
+    padding-bottom: 4px;
+}
+
+.blackText{
+    color: #000;
+}
+
+.bttn {
+    color: rgb(172, 103, 76);
+    background-color: rgba(156, 231, 250, 0.459);
+    border-radius: 4px;
+}
+
+textarea {
+    width: 222px;
+    resize: vertical;
+    height:50px;
+}

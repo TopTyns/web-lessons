@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/06.css">
+    <title>HTML-форми</title>
+</head>
+<body>
+    <form action="#">
+        <div class="bg">
+            <fieldset>
+                <legend class="legend">Контакти</legend>
+                <div class="area">
+                    <label class="label">Імя <input type="text" id="name" class="input"></label>
+                </div>
+                <div class="area">
+                    <label class="label">Телефон <input type="tel" id="numberPhone" class="input"></label>
+                </div>
+                <div class="area">
+                    <label class="label">Email <input type="email" id="email" class="input"></label>
+                </div>
+                <div class="area">
+                    <label class="label">Дата відвідування <input type="date" id="date" class="input"></label>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="bg">
+            <fieldset>
+                <legend class="legend">Персональна інформація</legend>
+                <div class="area">
+                    <label class="label">Вік <input type="number" min="1" max="120" step="1" id="age" class="input"></label>
+                </div>
+                <div class="area">
+                    <label class="label">Улюблена кухня
+                         <select class="select">
+                            <option value="1">Італійська</option>
+                            <option value="1">Українська</option>
+                            <option value="1">Французька</option>
+                            <option value="1">Мексиканська</option>
+                            <option value="1">Японська</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="area">
+                    <label class="label">Які страви ви хотіли би побачити в нашому меню?</label><textarea name="comment" cols="2" rows="5"></textarea>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="bg">
+            <fieldset>
+                <legend class="legend">Оцінка ресторану</legend>
+                <div class="area">
+                    <label class="label">Як ви дізналися про наш ресторан?
+                        <div class="blackText"><input type="radio" value="1">Поруч з будинком</div>
+                        <div class="blackText"><input type="radio" value="2">Реклама</div>
+                        <div class="blackText"><input type="radio" value="3">Порадили знайомі</div>
+                        <div class="blackText"><input type="radio" value="4" >Пошук в мережі Інтернет</div>
+                        <div class="blackText"><input type="radio" value="5">Інше</div>
+                    </label>
+                </div>
+                <div class="area">
+                    <label class="label">Чи будете ви рекомендувати наш ресторан знайомим?
+                        <div class="blackText"><input type="radio" value="1" class="radio">Так</div>
+                        <div class="blackText"><input type="radio" value="1" class="radio">Ні</div>
+                    </label>
+                </div>
+            </fieldset>
+        </div>
+        <div>
+            <button name="send" class="bttn">Відправити</button>
+        </div>
+    </form>
+</body>
+</html>
