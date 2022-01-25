@@ -1,0 +1,57 @@
+.container {
+    background-color: rgba(49, 145, 235, 0.863);
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    text-align: center;
+}
+
+.red_bg {
+    background-color: rgb(255, 255, 255);
+    width: 310px;
+    height: 330px;
+    margin: 60px 70px;
+    border-radius: 6px;
+}
+
+.block_login {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    text-align: center;
+}
+
+.pass, .name {
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+    background-color:rgba(102, 102, 102, 0.199);
+    border: 0;
+    border-radius: 4px;
+}
+
+.bttn {
+    background-color: rgba(5, 132, 252, 0.863);
+    color: #fff;
+    width: 255px;
+    height: 55px;
+    border: 0;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.login {
+    color: rgba(102, 102, 102, 0.925);
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.href {
+    color: rgba(102, 102, 102, 0.925);
+}
