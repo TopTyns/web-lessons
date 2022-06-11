@@ -14,9 +14,33 @@
     </table>
 
 <script>
+    let count = prompt("Введіть кількість людей: ");
+    let mas = [count];
+
+
+    for(let i = 0; i < count; i++)
+    {
+        let surname = "";
+        let growth = 0;
+
+        surname = prompt("Введіть прізвище: ");
+        growth = prompt("Введіть зріст: ");
+
+        let person = createPerson(surname, growth);
+
+        mas[i] = {
+            surname : person.surname,
+            growth : person.growth,
+        }
+
+
+    }
+
         let n = 0;
         let element = 0;
+
         alert("Завдання. Прізвище студента, його зріст. Виведіть під таблицею прізвище студента, який має найнижчий зріст.");
+
 
         function createPerson(surname, growth){
             return {
@@ -25,25 +49,7 @@
             }
         }
 
-        let person1 = createPerson("Богуцький", 173);
-        let person2 = createPerson("Смовж", 197);
-        let person3 = createPerson("Владимиров", 137);
-        let mas = [];
-
-        mas[0] = {
-            surname : person1.surname,
-            growth : person1.growth,
-        }
-        mas[1] = {
-            surname : person2.surname,
-            growth : person2.growth,
-        }
-        mas[2] = {
-            surname : person3.surname,
-            growth : person3.growth,
-        }
-
-
+    
         let table = document.querySelector('#table');
 
         min = Math.min(mas[0].growth, mas[1].growth, mas[2].growth);
