@@ -1,18 +1,23 @@
-alert("Створити об’єкт, який містить інформацію про назву товару, ціну та кількість.");
-let _name = prompt("Введіть назву товару:"); 
-let _coust = prompt("Введіть ціну за одиницю товару:"); 
-let _amount = prompt("Введіть кількість товару:"); 
-let sum = 0;
+alert("Завдання 1. Створити об’єкт, який містить інформацію про назву товару, ціну та кількість.");
+alert("Завдання 2. Створити метод, який підраховує вартість");
+alert("Завдання 3. Реалізувати фабричну функцію для створення об’єкта");
 
-let object = {     
-    name: _name, 
-    coust: _coust, 
-    amount: _amount,   
-  };
+  function createObject(name, coust, amount){
+    return {
+        name: name,
+        coust: coust,
+        amount: amount,
+        info: function(){
+            alert(`Назва товару: ${this.name} \nВартість товару: ${this.coust} \nКількість товару: ${this.amount}`)
+        },
+        calc: function(){
+            let sum = coust * amount * 1;
+            alert("Вартість усього: " + sum);
+        }
+    }
+}
 
-  function CalculateAQmount(){
-      sum = _coust*_amount*1;
-  }
-  CalculateAQmount();
-  alert("Створити метод, який підраховує вартість");
-  alert("Вартість: " + sum);
+let product = createObject("Зошит", 5, 4);
+
+product.info();
+product.calc();
