@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Лабораторна робота №7. Створення та використання об'єктів та масивів.</title>
+</head>
+<body>
+
+    <table id="table">
+        <tr><th>Номер</th><th>Прізвище</th><th>Зріст</th></tr>
+    </table>
+
+<script>
+        let n = 0;
+        let element = 0;
+        alert("Завдання. Прізвище студента, його зріст. Виведіть під таблицею прізвище студента, який має найнижчий зріст.");
+
+        function createPerson(surname, growth){
+            return {
+                surname,
+                growth,
+            }
+        }
+
+        let person1 = createPerson("Богуцький", 173);
+        let person2 = createPerson("Смовж", 197);
+        let person3 = createPerson("Владимиров", 137);
+        let mas = [];
+
+        mas[0] = {
+            surname : person1.surname,
+            growth : person1.growth,
+        }
+        mas[1] = {
+            surname : person2.surname,
+            growth : person2.growth,
+        }
+        mas[2] = {
+            surname : person3.surname,
+            growth : person3.growth,
+        }
+
+
+        let table = document.querySelector('#table');
+
+        min = Math.min(mas[0].growth, mas[1].growth, mas[2].growth);
+
+        fillTable(table);
+        
+
+        function fillTable(table)
+        {
+            for (let i = 0; i <= mas.length; i++)
+            {
+                 let tr = document.createElement('tr');
+                    
+                    let td1 = document.createElement('td');
+                    td1.innerHTML = n;
+                    tr.appendChild(td1);
+                    n++;
+                        
+                    let td2 = document.createElement('td');
+                    td2.innerHTML = mas[element].surname;
+                    tr.appendChild(td2);
+                        
+                    let td3 = document.createElement('td');
+                    td3.innerHTML = mas[element].growth;
+                    tr.appendChild(td3);
+                        
+                    element++;
+                  table.appendChild(tr);
+
+                  if(min == mas[i].growth)
+                  {
+                    
+                    document.write("Студент, який має найнижчий зріст: " + mas[i].surname);
+                  }
+            }
+
+
+                
+        }
+            
+          
+            
+    
+</script>
+
+</body>
+</html>
+
