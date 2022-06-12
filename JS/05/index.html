@@ -16,7 +16,7 @@
 <script>
     let count = prompt("Введіть кількість людей: ");
     let mas = [count];
-
+    let min;
 
     for(let i = 0; i < count; i++)
     {
@@ -32,10 +32,19 @@
             surname : person.surname,
             growth : person.growth,
         }
-
-
+        if(min == undefined)
+        {
+            min = mas[0].growth;
+            console.log("min1" + min);
+        }
+        else{
+            if(mas[i].growth < min){
+                min = mas[i].growth;
+                console.log("min2" + min);
+            }
+        }
     }
-
+    console.log("min3" + min);
         let n = 0;
         let element = 0;
 
@@ -52,7 +61,7 @@
     
         let table = document.querySelector('#table');
 
-        min = Math.min(mas[0].growth, mas[1].growth, mas[2].growth);
+        
 
         fillTable(table);
         
